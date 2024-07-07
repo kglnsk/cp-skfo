@@ -42,7 +42,7 @@ export const useFilesStore = defineStore('files', {
             }
 
             try {
-                const res = await axios.post('', formData)
+                const res = await axios.post('localhost:8085/upload', formData)
                 if (res?.data) {
                     this.tableData = res.data.map((item: ITableData) => {
                         return {
